@@ -1,0 +1,135 @@
+.table, .chair, .cat, .cat-legs, .cake, .cow {
+    background-size: 100% 100%;
+    position: absolute;
+    animation: cows 2s infinite;
+}
+
+.table {
+    width: 500px;
+    height: 500px;
+    background-image: url(./img/table.png);
+    z-index: 8;
+}
+
+.chair {
+    width: 270px;
+    height: 333px;
+    background-image: url(./img/chair.png);
+    z-index: 7;
+    left: 330px;
+    top: 30px;
+   
+}
+
+.cat, .cat-legs {
+    width: 300px;
+    height: 200px;
+    left: 110px;
+    top: 0px;
+}
+
+.cat {
+    background-image: url(./img/cat.png);
+    z-index: 12;
+}
+
+.cat-legs {
+    background-image: url(./img/cat-legs.png);
+    z-index: 10;
+}
+
+.cake {
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/cake.png);
+    z-index: 11;
+    left: 270px;
+    top: 80px;
+}
+
+.cow {
+    width: 777px;
+    height: 777px;
+    background-image: url(./img/cow.png);
+    right: -20px;
+    bottom: 0px;
+    z-index: 14;
+    animation: meow 3s infinite;
+    
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url(./img/background.jpg);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.things {
+    position: absolute;
+    top: 100px;
+    animation: thng 1s infinite;
+}
+
+.new-cow {
+    position: absolute;
+    width: 180px;
+    height: 128px;
+    background-image: url(./img/new-cow.png);
+    background-size: 100% 100%;
+    animation: cow-falling 2s linear infinite;
+    z-index: 13;
+}
+
+@keyframes cow-falling {
+    0% {
+        left: 0%;
+        top: 0%;
+        transform: rotate(0turn);
+    }
+    50% {
+        left: 30%;
+        transform: rotate(1.2turn) scale(4);
+    }
+    80% {
+        transform: rotate(1.1turn) scale(4.1);
+    }
+    100% {
+        left: 0%;
+        top: 100%;
+        transform: rotate(5turn);
+    }
+}
+
+@keyframes cows {
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-1turn);
+    }
+    75% {
+        transform: rotate(-1.2turn);
+    }
+    100% {
+        transform: rotate(-1turn);
+    }
+    
+}
+
+@keyframes meow {
+    50% {
+        transform: rotate(18deg) scale(1.2) translateX(30px);
+    }
+}
+
+@keyframes thng {
+    50% {
+        transform: rotate(-36deg);
+    }
+    
+}

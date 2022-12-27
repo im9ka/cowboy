@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.circle1, .circle2, .circle3 {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    /* border-radius: 50%; */
+    animation: suka 1s  linear infinite;
+}
+
+.circle1 {
+    background-color: #00f;
+    left: 100px;
+    top: 50px;
+}
+
+.circle2 {
+    background-image: url(https://pin.it/ws0ZRT9);
+    background-size: 100%;
+    left: 600px;
+    top: 200px;
+}
+
+.circle3 {
+    background-color: #f00;
+    right: 100px;
+    bottom: 100px;
+}
+
+@keyframes suka {
+    0% {
+        transform: rotate(0deg) scale(0.1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(2.0);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(0.1);
+    }
+}
